@@ -1,4 +1,4 @@
-import { Row, Board } from '../src/sudoku.js';
+import { Board } from '../src/sudoku.js';
 
 
 describe('Sudoku' , function() {
