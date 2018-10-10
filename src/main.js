@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { Board } from '../src/sudoku.js';
 
 $(document).ready(function() {
     $('#form').submit(function(event){
@@ -24,5 +25,13 @@ $(document).ready(function() {
         }
       });
       console.log(allInputs);
+      var newBoard = new Board(allInputs[0],allInputs[1],allInputs[2]);
+      var checkResult = newBoard.ultChecker();
+      console.log(checkResult);
+      if (checkResult) {
+        $("#result").html("<h3>This Sudoku is legal!</h3>");
+      } else {
+        $("#result").html("<h3>This Sudoku is illegal!</h3>");
+      }
     });
 });

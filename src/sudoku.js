@@ -3,8 +3,7 @@
 //   [1,2,0],
 //   [2,0,1] ];
 
-export var Board = function (rowOne, rowTwo, rowThree)
-{
+export var Board = function (rowOne, rowTwo, rowThree) {
   var tempArray= [];
   tempArray.push(rowOne);
   tempArray.push(rowTwo);
@@ -12,11 +11,9 @@ export var Board = function (rowOne, rowTwo, rowThree)
   this.matrix = tempArray.slice();
 }
 
-export var numberArray = [0,1,2];
-
 
 Board.prototype.rowChecker = function () {
-
+  var numberArray = [0,1,2];
   var matchedRow = 0;
   for (var i=0; i< 3; i++){
     var storedArray = [];
@@ -38,6 +35,7 @@ Board.prototype.rowChecker = function () {
 
 
 Board.prototype.colChecker = function (){
+  var numberArray = [0,1,2];
   var matchedCol = 0;
   for (var j=0; j< 3; j++)
   {
