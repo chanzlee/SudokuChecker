@@ -24,10 +24,10 @@ $(document).ready(function() {
           allInputsInRow.push(parseInt($(inputNumber).val()));
         }
       });
-      console.log(allInputs);
+
       var newBoard = new Board(allInputs[0],allInputs[1],allInputs[2]);
       var checkResult = newBoard.ultChecker();
-      console.log(checkResult);
+
       if (checkResult) {
         $("#result").html("<h3>This Sudoku is legal!</h3>");
       } else {
